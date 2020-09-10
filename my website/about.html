@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 3px;
+            align-items: center;
+            justify-content: center;
+            height: 350px;
+            background: url("https://source.unsplash.com/featured/1600x900/?business,study,coding");
+            opacity: 0.8;
+        }
+        
+        .heading {
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .para {
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .boxcontainer {
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: antiquewhite;
+            width: 100%;
+            height: 400px;
+        }
+        
+        .box1 {
+            width: 420px;
+            display: block;
+            /* background-color: blue; */
+            text-align: center;
+            margin: auto;
+            background-color: rgb(245, 235, 235);
+            height: 340px;
+            border-radius: 34px;
+            border: 2px solid brown;
+        }
+        
+        .box2 {
+            width: 420px;
+            display: block;
+            /* background-color: blue; */
+            text-align: center;
+            margin: auto;
+            background-color: rgb(245, 235, 235);
+            height: 340px;
+            border-radius: 34px;
+            border: 2px solid brown;
+        }
+        
+        .box3 {
+            width: 420px;
+            display: block;
+            /* background-color: blue; */
+            text-align: center;
+            margin: auto;
+            background-color: rgb(245, 235, 235);
+            height: 340px;
+            border-radius: 34px;
+            border: 2px solid brown;
+        }
+        
+        .box1:hover {
+            height: 500px;
+            width: 500px;
+            background-color: hotpink;
+        }
+        
+        .box3:hover {
+            height: 500px;
+            width: 500px;
+            background-color: hotpink;
+        }
+        
+        .box2:hover {
+            height: 500px;
+            width: 500px;
+            background-color: hotpink;
+        }
+        
+        .container2 {
+            display: flex;
+        }
+        
+        .container2 img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .btn {
+            background-color: crimson;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="heading">ABOUT ME</h3>
+        <P class="para">I am an ACCA affiliated a bussiness minded/data scientist/machine learning/deep learning and web development enthusiast and main thing is that i am obsessed with learning new things </P>
+    </div>
+    <section class="boxcontainer">
+        <h2>MY SKILLS</h2>
+        <div class="container2">
+
+            <div class="box1">
+                <img src="data.jpg" alt="">
+                <h2>DATA SCIENCE</h2>
+                <P class="para">Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is related to data mining, machine learning
+                    and big data.
+                    <button onclick="document.location='/contact.html'" class="btn">contact me</button>
+                </P>
+            </div>
+            <div class="box2">
+                <img src="web.jpg" alt="">
+                <h2>WEB DEVELOPMENT</h2>
+                <P class="para">Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; interface design; authoring, including standardised code and proprietary
+                    software; user experience design; and search engine optimization
+                    <button onclick="document.location='/contact.html'" class="btn">contact me</button>
+                </P>
+            </div>
+            <div class="box3">
+                <img src="bus.jpg" alt="">
+                <h2 class="data">BUSINESS</h2>
+                <P class="para">Certain skills are also vital to your success in this field, including those in sales, communication, negotiation, marketing, data analysis and project management. By building these skills, you can increase your chances of success in the
+                    field of business development
+                    <button onclick="document.location='/contact.html'" class="btn">contact me</button>
+                </P>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

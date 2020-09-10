@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container2::before {
+            content: "";
+            background: url("https://source.unsplash.com/featured/1600x900/?contact,business");
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.75;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .input1 {
+            display: flex;
+            text-align: center;
+            width: 1000px;
+            height: 50px;
+            border: 2px solid gray;
+            margin: 3px;
+        }
+        
+        .input2 {
+            display: flex;
+            text-align: center;
+            width: 1000px;
+            height: 50px;
+            border: 2px solid gray;
+            margin: 3px;
+        }
+        
+        .input3 {
+            display: flex;
+            text-align: center;
+            width: 1000px;
+            height: 50px;
+            border: 2px solid gray;
+            margin: 3px;
+        }
+        
+        .input4 {
+            display: flex;
+            text-align: center;
+            width: 1000px;
+            height: 50px;
+            border: 2px solid gray;
+            margin: 3px;
+        }
+        
+        #text {
+            width: 1000px;
+            height: 150px;
+            border: 2px solid gray;
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container2">
+
+        <div class="container">
+            <h2>CONTACT ME</h2>
+            <form action="">
+                <input type="text" name="name" placeholder="Enter your name" class="input1">
+                <input type="email" name="email" placeholder="Enter your email" class="input2">
+                <input type="text" name="address" placeholder="Enter your address" class="input3">
+                <input type="number" name="phone no" placeholder="Enter your no" class="input4">
+                <textarea name="Tell me more about you want to know" id="text" cols="30" rows="10"></textarea>
+            </form>
+            <button id="btn">SUBMIT</button>
+        </div>
+    </section>
+    <script>
+        const fs = require('fs');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener(onclick, submitform);
+
+        function submitform() {
+            let name = document.getElementsByClassName('input1').value;
+            let email = document.getElementsByClassName('input2').value;
+            let address = document.getElementsByClassName('input3').value;
+            let phone = document.getElementsByClassName('input4').value;
+            let text = document.getElementsByClassName('input1').value;
+
+            value = `name: ${name} email: ${email} address: ${address} phone no: ${phone} enquiry: ${text}`
+
+            if (name.length >= 3 && email.length >= 12 && address.length >= 3 && phone.length == 10) {
+                fs.writeFile('formdata.txt', value, (err) => {
+                    if (err) throw err;
+                })
+            } else {
+                console.log('not submited');
+            }
+        }
+    </script>
+</body>
+
+</html>

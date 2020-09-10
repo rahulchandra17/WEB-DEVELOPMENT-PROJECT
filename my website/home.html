@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul chandra website</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            border-radius: 5px;
+            height: 65px;
+            /* position: sticky; */
+        }
+        
+        .list a {
+            margin: 50px;
+            color: rgb(233, 14, 14);
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .section {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 3px;
+            align-items: center;
+            justify-content: center;
+            height: 480px;
+            /* background: url("https://source.unsplash.com/collection/190727/1600x900"); */
+        }
+        
+        .navbar::before {
+            content: "";
+            background: url("https://source.unsplash.com/featured/1600x900/?coding,study,busines");
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.75;
+        }
+        
+        .heading {
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .para {
+            text-align: center;
+            font-size: 20px;
+            width: 500px;
+        }
+        
+        .section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 34px;
+        }
+        
+        .navbar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+        
+        .btn {
+            display: flex;
+            text-align: center;
+            border-radius: 20px;
+            border: 3px solid rebeccapurple;
+            width: 100px;
+            padding: 2px 2px;
+            color: blanchedalmond;
+            background-color: rgb(247, 55, 55);
+        }
+        
+        .btn:hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+        
+        .btnn {
+            margin: 2px;
+        }
+        
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="mypic.jpg" alt="">
+        <li class="list"> <a href="/">Home</a> </li>
+        <li class="list"> <a href="/about">About me</a> </li>
+        <li class="list"><a href="/contact.html">Contact me</a></li>
+        <div class="box">
+            <input type="text" name="search" id="search" placeholder="Search">
+            <button onclick="search()" class="btn" id="btn1">search</button>
+        </div>
+    </nav>
+    <section class="section">
+        <img src="./mypic.jpg" alt="">
+        <h3 class="heading">WELCOME TO MY WEBSITE</h3>
+        <P class="para">Myself Rahul chandra from jamalpur bihar india i did my schooling from S.V.M jamalpur and high schooling from S.V.M munger and did my graduation from ST.xaviers Ranchi and did ACCA along with that. </P>
+        <p class="para">
+            If you want to learn data science/web development and business skill then contact me
+        </p>
+        <div class="button">
+            <div class="btnn">
+                <button onclick="document.location= 'http://github.com/rahulchandra17'" class="btn">MY GITHUB</button>
+            </div>
+            <div class="btnn">
+                <button onclick="document.location='/contact.html'" class="btn">CONTACT ME</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function search() {
+            var blah = document.getElementById('search').value;
+            location.replace("http://google.com/search?q=" + blah + "");
+        }
+    </script>
+</body>
+
+</html>
